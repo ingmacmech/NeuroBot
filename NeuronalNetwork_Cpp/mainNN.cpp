@@ -1,26 +1,23 @@
 /*****************************************************************************/
-/*  Module     : LineMain                                       Version 1.0  */
+/*  Module     : mainNN                                         Version 1.0  */
 /*****************************************************************************/
 /*                                                                           */
-/*  Function   : Main function for the LineClass, just demonstrates          */
-/*               the usage of the LineClass objects                          */
+/*  Function   : Main function for the mainNN, just demonstrates             */
+/*               the usage of the Neuronal Network                           */
 /*                                                                           */
 /*  Procedures: main()                                                       */
-/*              FunctionWithLocalObject()  ToModify                          */
-/*              TestFunction()             ToModify                          */
+/*																			 */                                                                          */
+/*  Author     : ingmacmech                                                  */
 /*                                                                           */
-/*  Author     : I. Oesch                                                    */
+/*  History    : 22.03.2017  IO Created                                      */
 /*                                                                           */
-/*  History    : 05.03.2001  IO Created                                      */
-/*                                                                           */
-/*  File       : LineMain.cpp                                                */
+/*  File       : mainNN.cpp                                                  */
 /*                                                                           */
 /*****************************************************************************/
-/* HTA Burgdorf                                                              */
+/* Artificial Neuronal Networks                                              */
 /*****************************************************************************/
 
 /* imports */
-//#include "LineClass.hpp"
 #include <iostream>
 #include <stdlib.h>
 #include <armadillo>
@@ -44,8 +41,8 @@ using namespace arma;
 /*****************************************************************************/
 /*                                                                           */
 /*  Function    : Is the entrypoint and the main procedure for the           */
-/*                LineClass demonstration. Creates some LineClass objects    */
-/*                uses them and destrois them afterwards                     */
+/*                NeuronalNetwork demonstration.							 */
+/*				  Creates a test Bot for connect4							 */
 /*                                                                           */
 /*  Type        : global                                                     */
 /*                                                                           */
@@ -55,7 +52,7 @@ using namespace arma;
 /*                                                                           */
 /*  Author      : ingmacmech                                                 */
 /*                                                                           */
-/*  History     : 21.02.2017      Created                                    */
+/*  History     : 22.03.2017      Created                                    */
 /*                                                                           */
 /*****************************************************************************/
 int main(int argc, char *argv[])
