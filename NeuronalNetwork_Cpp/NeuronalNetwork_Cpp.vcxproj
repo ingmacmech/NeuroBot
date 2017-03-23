@@ -148,10 +148,12 @@
   <ItemGroup>
     <ClCompile Include="InputNN.cpp" />
     <ClCompile Include="mainNN.cpp" />
+    <ClCompile Include="NeuronalNetwork.cpp" />
     <ClCompile Include="OutputNN.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InputNN.h" />
+    <ClInclude Include="NeuronalNetwork.h" />
     <ClInclude Include="OutputNN.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
