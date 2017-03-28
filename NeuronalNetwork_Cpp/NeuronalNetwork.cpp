@@ -56,29 +56,29 @@ using namespace arma;
 /*****************************************************************************/
 NeuronalNetwork::NeuronalNetwork(int nLayer, int layerSize[])
 {
-	/* Copy */
+	/*###### Copy ######*/
 	this->layerSize = new int[nLayer];
-	//this->layerSize = (int*)calloc(nLayer, sizeof(int));
-	
-	
+	nTheta = nLayer - 1;
+	this->nLayer = nLayer;
+		
 	for (int i = 0; i < nLayer; i++)
 	{
 		this->layerSize[i] = layerSize[i];
 	}
 	
-	
-	this->nLayer = nLayer;
+	/*###### Gen weight matrices ######*/
 	// for n layer it needs n-1 weight  matrices
-	nTheta = nLayer - 1;
-	
 	theta = new mat[nTheta];
-	
 	// size of each weight matrix is added with an additional column for bias
 	for (int n = 0; n < nTheta; n++)
 	{
 		theta[n].set_size(layerSize[n + 1], layerSize[n] + 1);
 		theta[n].fill(1.0);	
 	}
+
+	/*###### Gen input and output ######*/
+	input = new InputNN(layerSize[0]);
+	output = new OutputNN(layerSize[nLayer-1]);
 }
 
 /*****************************************************************************/

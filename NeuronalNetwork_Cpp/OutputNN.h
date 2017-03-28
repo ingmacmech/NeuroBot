@@ -38,14 +38,13 @@ using namespace arma;
 class OutputNN {
 
 	// Data
-	vec output;
-	int nOutput;
+	vec *output;
 	// Methods
 
 
 public:
 	// Constructor
-	OutputNN();
+	OutputNN(int size);
 
 	// Copy Constructor
 

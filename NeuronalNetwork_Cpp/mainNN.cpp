@@ -65,8 +65,12 @@ int main(int argc, char *argv[])
 {
 	int sizeOfLayer[4] = { 5, 4, 6, 5};
 	NeuronalNetwork testNN(4, sizeOfLayer);
+	
+	
 	testNN.printLayerSize();
 	testNN.printTheta();
+	
+	
 	
 	mat A(2, 3);
 

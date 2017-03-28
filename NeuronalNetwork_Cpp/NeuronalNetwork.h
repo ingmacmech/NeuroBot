@@ -26,6 +26,12 @@
 /* imports */
 #include<armadillo>
 #include<array>
+
+/* user imports*/
+#include"InputNN.h"
+#include"OutputNN.h"
+
+/* namespaces */
 using namespace arma;
 /* Class constant declaration  */
 
@@ -44,6 +50,9 @@ class NeuronalNetwork {
 	
 	int nTheta;
 	mat *theta;
+
+	InputNN *input;
+	OutputNN *output;
 	
 	
 	// Methods

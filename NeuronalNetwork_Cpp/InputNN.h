@@ -38,14 +38,13 @@ using namespace arma;
 class InputNN {
 
 	// Data
-	vec input;
-	int nInput;
+	vec *input;
 	// Methods
 
 	
 public: 
 	// Constructor
-	InputNN();
+	InputNN(int size);
 	
 	// Copy Constructor
 	
