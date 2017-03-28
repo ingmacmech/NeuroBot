@@ -54,10 +54,31 @@ using namespace arma;
 /*  History     : 23.03.2017     Created                                     */
 /*                                                                           */
 /*****************************************************************************/
-
-NeuronalNetwork::NeuronalNetwork()
+NeuronalNetwork::NeuronalNetwork(int nLayer, int layerSize[])
 {
-
+	/* Copy */
+	this->layerSize = new int[nLayer];
+	//this->layerSize = (int*)calloc(nLayer, sizeof(int));
+	
+	
+	for (int i = 0; i < nLayer; i++)
+	{
+		this->layerSize[i] = layerSize[i];
+	}
+	
+	
+	this->nLayer = nLayer;
+	// for n layer it needs n-1 weight  matrices
+	nTheta = nLayer - 1;
+	
+	theta = new mat[nTheta];
+	
+	// size of each weight matrix is added with an additional column for bias
+	for (int n = 0; n < nTheta; n++)
+	{
+		theta[n].set_size(layerSize[n + 1], layerSize[n] + 1);
+		theta[n].fill(1.0);	
+	}
 }
 
 /*****************************************************************************/
@@ -85,6 +106,7 @@ NeuronalNetwork::NeuronalNetwork()
 /*****************************************************************************/
 NeuronalNetwork::~NeuronalNetwork()
 {
+	
 	std::cout << "\nNeuronalNetwork destroyed\n" << std::endl;
 
 }
@@ -93,8 +115,22 @@ NeuronalNetwork::~NeuronalNetwork()
 /*  End  Method : Destructor                                                 */
 /*****************************************************************************/
 
+void NeuronalNetwork::printLayerSize()
+{
+	for (int n = 0; n < nLayer; n++)
+	{
+		std::cout << n << ": " << layerSize[n] << std::endl;
+	}
+}
 
-
+void NeuronalNetwork::printTheta()
+{
+	for (int n = 0; n < nTheta; n++)
+	{
+		std::cout << "Theta" << n + 1 << ":" << std::endl;
+		theta[n].print();
+	}
+}
 
 /*****************************************************************************/
 /*  End Class   : NeuronalNetwork                                            */

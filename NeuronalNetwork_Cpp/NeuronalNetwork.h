@@ -25,27 +25,33 @@
 
 /* imports */
 #include<armadillo>
+#include<array>
 using namespace arma;
 /* Class constant declaration  */
 
 /* Class Type declaration      */
 
 /* Class data declaration      */
+ 
 
 /* Class definition            */
-
 
 class NeuronalNetwork {
 
 	// Data
+	int nLayer;
+	int *layerSize; // without bias input (bias will be added automaticly)
+	
+	int nTheta;
+	mat *theta;
+	
 	
 	// Methods
 
 
 public:
 	// Constructor
-	NeuronalNetwork();
-
+	NeuronalNetwork(int nLayer, int layerSize[]);
 	// Copy Constructor
 
 
@@ -53,7 +59,9 @@ public:
 	~NeuronalNetwork();
 
 	// Methode
-	
+	void printLayerSize();
+	void printTheta();
+
 };
 
 /*****************************************************************************/

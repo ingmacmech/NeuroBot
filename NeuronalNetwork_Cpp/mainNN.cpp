@@ -6,7 +6,7 @@
 /*               the usage of the Neuronal Network                           */
 /*                                                                           */
 /*  Procedures: main()                                                       */
-/*																			 */                                                                          */
+/*																			 */
 /*  Author     : ingmacmech                                                  */
 /*                                                                           */
 /*  History    : 22.03.2017  IO Created                                      */
@@ -20,7 +20,12 @@
 /* imports */
 #include <iostream>
 #include <stdlib.h>
+#include <array>
 #include <armadillo>
+
+/*user iports*/
+#include "NeuronalNetwork.h"
+
 
 using namespace arma;
 
@@ -30,6 +35,7 @@ using namespace arma;
 /* Module Type declaration      */
 
 /* Module data declaration      */
+
 
 /* Module procedure declaration */
 
@@ -57,7 +63,11 @@ using namespace arma;
 /*****************************************************************************/
 int main(int argc, char *argv[])
 {
-
+	int sizeOfLayer[4] = { 5, 4, 6, 5};
+	NeuronalNetwork testNN(4, sizeOfLayer);
+	testNN.printLayerSize();
+	testNN.printTheta();
+	
 	mat A(2, 3);
 
 	A.fill(5.0);
@@ -66,9 +76,8 @@ int main(int argc, char *argv[])
 
 	// Wait for the user to press any key before end the program
 	system("Pause");
-
 	// Return No error to the operating system
-	return 0;  // at this point, our two local objects are also deletet
+	return 0;  
 }
 /*****************************************************************************/
 /*  End  Procedure : main                                                    */
