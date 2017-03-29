@@ -146,10 +146,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="InputNN.cpp" />
     <ClCompile Include="mainNN.cpp" />
     <ClCompile Include="NeuronalNetwork.cpp" />
-    <ClCompile Include="OutputNN.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InputNN.h" />

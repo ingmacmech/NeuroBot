@@ -18,12 +18,6 @@
     <ClCompile Include="mainNN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InputNN.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OutputNN.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="NeuronalNetwork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -6,18 +6,11 @@
 /*                                                                           */
 /*  Function   : This class describes the Neuronal Network				     */
 /*                                                                           */
-/*                                                                           */
-/*  Methodes   :					                                         */
-/*																			 */
-/*									                                         */
-/*									                                         */
-/*									                                         */
-/*                                                                           */
 /*  Author     : ingmacmech                                                  */
 /*                                                                           */
 /*  History    : 23.03.2017  IO Created                                      */
 /*                                                                           */
-/*  File       : NeuronalNetwork.hpp                                                 */
+/*  File       : NeuronalNetwork.hpp                                         */
 /*                                                                           */
 /*****************************************************************************/
 /* Artificial Neuronal Network                                               */
@@ -28,8 +21,8 @@
 #include<array>
 
 /* user imports*/
-#include"InputNN.h"
-#include"OutputNN.h"
+//#include"InputNN.h"
+//#include"OutputNN.h"
 
 /* namespaces */
 using namespace arma;
@@ -51,8 +44,9 @@ class NeuronalNetwork {
 	int nTheta;
 	mat *theta;
 
-	InputNN *input;
-	OutputNN *output;
+	vec input;
+	vec output;
+	vec *hiddenLayer;
 	
 	
 	// Methods
@@ -70,6 +64,10 @@ public:
 	// Methode
 	void printLayerSize();
 	void printTheta();
+	void getInput();
+	vec compute();
+	vec getOutput();
+
 
 };
 
